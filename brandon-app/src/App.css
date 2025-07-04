@@ -1,0 +1,154 @@
+#root {
+	max-width: 1280px;
+	margin: 0 auto;
+	padding: 2rem;
+	text-align: center;
+}
+
+.logo {
+	height: 6em;
+	padding: 1.5em;
+	will-change: filter;
+	transition: filter 300ms;
+}
+.logo:hover {
+	filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+	filter: drop-shadow(0 0 2em #61dafbaa);
+}
+.logo.cloudflare:hover {
+	filter: drop-shadow(0 0 2em #f6821faa);
+}
+
+@keyframes logo-spin {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	a:nth-of-type(2) .logo {
+		animation: logo-spin infinite 20s linear;
+	}
+}
+
+.card {
+	padding: 2em;
+}
+
+.read-the-docs {
+	color: #888;
+}
+
+.chain-switch {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.switch-toggle {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: #23272f;
+  border-radius: 32px;
+  padding: 4px 8px;
+  min-width: 180px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+
+.switch-input {
+  display: none;
+}
+
+.switch-label {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  cursor: pointer;
+  position: relative;
+  user-select: none;
+  gap: 0.5em;
+}
+
+.switch-option {
+  flex: 1 1 0;
+  text-align: center;
+  z-index: 2;
+  color: #b0b8c1;
+  font-weight: 500;
+  font-size: 1.08em;
+  padding: 10px 0;
+  transition: color 0.2s, font-weight 0.2s;
+  letter-spacing: 0.01em;
+}
+
+.switch-option.selected {
+  color: #fff;
+  font-weight: 700;
+  text-shadow: 0 1px 8px rgba(99,102,241,0.10), 0 1px 8px rgba(20,241,149,0.10);
+}
+
+.switch-slider {
+  position: absolute;
+  left: 4px;
+  top: 4px;
+  width: calc(50% - 8px);
+  height: calc(100% - 8px);
+  background: linear-gradient(90deg, #6366f1 0%, #14f195 100%);
+  border-radius: 999px;
+  transition: transform 0.25s cubic-bezier(.4,2.3,.3,1), background 0.2s;
+  z-index: 1;
+  box-shadow: 0 2px 12px 0 rgba(99,102,241,0.18), 0 1.5px 8px rgba(20,241,149,0.10);
+  transform: translateX(0);
+  filter: blur(0.5px);
+}
+
+.switch-input:checked + .switch-label .switch-slider {
+  transform: translateX(100%);
+  background: linear-gradient(90deg, #14f195 0%, #6366f1 100%);
+}
+
+.switch-label .switch-slider {
+  pointer-events: none;
+}
+
+/* Modern toggle enhancements */
+.switch-toggle.modern {
+  background: #181c24;
+  border-radius: 999px;
+  padding: 4px 6px;
+  min-width: 220px;
+  box-shadow: 0 4px 16px rgba(44, 62, 80, 0.10), 0 1.5px 8px rgba(20,241,149,0.04);
+  border: 1.5px solid #23272f;
+}
+
+.connect-btn {
+  border: none;
+  border-radius: 999px;
+  padding: 0.85em 2.2em;
+  background: linear-gradient(90deg, #6366f1 0%, #14f195 100%);
+  color: #fff;
+  font-size: 1.1em;
+  font-weight: 700;
+  box-shadow: 0 2px 8px rgba(44,62,80,0.10);
+  transition: background 0.2s, box-shadow 0.2s, transform 0.1s;
+}
+.connect-btn:hover:not(:disabled), .connect-btn:focus-visible:not(:disabled) {
+  background: linear-gradient(90deg, #6366f1 10%, #14f195 90%);
+  box-shadow: 0 4px 16px rgba(99,102,241,0.18), 0 2px 12px rgba(20,241,149,0.10);
+  transform: translateY(-2px) scale(1.03);
+}
+.connect-btn:active {
+  transform: scale(0.98);
+}
+.connect-btn.connect-ethereum {
+  background: linear-gradient(90deg, #6366f1 0%, #8b5cf6 100%);
+}
+.connect-btn.connect-solana {
+  background: linear-gradient(90deg, #14f195 0%, #6366f1 100%);
+}
