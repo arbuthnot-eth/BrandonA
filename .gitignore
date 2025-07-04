@@ -20,6 +20,14 @@ node_modules/
 *.njsproj
 *.sln
 *.sw?
+.env
 
 # OS specific
 .DS_Store
+
+# Vite build output
+dist/
+.vite/
+
+# Wrangler build output
+.wrangler/
